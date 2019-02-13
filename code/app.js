@@ -1,4 +1,4 @@
-app = {
+var app = {
     init : function() {
         console.log("init inside app!");
         $("title").text("Bar prof");
