@@ -1,0 +1,14 @@
+.mytable {
+    width:70%;
+}
+
+.mytableheadercell {
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+}
+
+.mytablecell,.mytableheadercell {
+  float: left;
+  width: 50%;
+}
