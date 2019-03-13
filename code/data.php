@@ -12,7 +12,7 @@ $menuJson = json_encode($menuObj);
 //echo $menuJson;
 
 // Create connection
-$servername = "172.26.0.2";
+$servername = "bar-prof_db_1";
 $username = "root";
 $password = "password";
 $dbname = "db";
