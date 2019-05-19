@@ -33,6 +33,9 @@ var app = {
         // associate the event to each plus button
         $(".add-button").on("click", app.addQuantityByOne);
         // set the cursor as pointer
+        // note that $().css is another way to set css property programmatically
+        // however, this is *not* recommended, please use stylesheets when possible
+        // here used as an example
         $(".add-button").css("cursor", "pointer");
     },
     addQuantityByOne: function () {
