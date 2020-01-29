@@ -1,11 +1,11 @@
 var app = {
-    baseURL: "https://marconi-bar.firebaseio.com/bar-prof",
+    baseURL: "TODO",
     productList: {},
     init: function () {
-        console.log("init inside app!");
-        $("title").text("Bar prof");
+        console.log("init here!");
+        $("title").text("Web app template");
         // Get the product list from the database
-        app.getProductList();
+        app.productList();
     },
     getProductList: function() {
         // make a HTTP GET request
@@ -16,7 +16,7 @@ var app = {
     onSuccess: function (jsonData) {
         console.log(jsonData);
         // Delete the current table
-        $("#menu-table-body").html("");
+        $("#table-body").html("");
         // save data in a local variable
         app.productList = jsonData.productList;
         // update the list
@@ -28,7 +28,7 @@ var app = {
             <div class="menu-table-cell">${element.price} euro</div>
             <div class="menu-table-cell">${element.quantity} <span data-id="${idx}" class="add-button">+</span></div>
             </div>`;
-            $("#menu-table-body").append(productRow);
+            $("#table-body").append(productRow);
         });
         // associate the event to each plus button
         $(".add-button").on("click", app.addQuantityByOne);
